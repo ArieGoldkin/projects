@@ -1,0 +1,37 @@
+web site form:
+
+body:
+put background image //done
+
+header:
+> top
+> bottom
+> logo
+
+content:
+> slider
+> promotions button
+> info sections
+> videos
+
+use routs
+fotter
+
+web for use:
+www.refael4u.co.il
+
+READ: about ajax
+
+TODO:
+fix slider 
+add geolocation to the webSite --- done
+add check box to DB with true/false
+need to send  "request hs been sent" message when submiting the form
+validation of the form fontend and backend
+sending email when new user sends message
+need to add in google map the location of the Business
+
+** geolocation api google map key:
+AIzaSyA7ax4bPqr5cou5uRgRvXxwaTsdUO8zNLM
+
+SPLIT IN 2 FOLDER ONE SERVER ONE CLIENT

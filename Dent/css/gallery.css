@@ -1,0 +1,61 @@
+.contentHeader {
+    width: 100%;
+    color: #ffffff;
+}
+
+.contentInfo {
+    padding: 15px;
+    display: flex;
+
+}
+.contentHeader h3 {
+    font-size: 40px;
+    color: #231F20;
+    margin: 30px 10px 30px 0;
+}
+
+.dentalImplantsInfo {
+    text-align:justify;
+    
+}
+.dentalImplantsInfo img
+{
+    float:left;
+    vertical-align:top; 
+    margin: 0px 20px 0px 0px;
+}
+
+    /******* FOOTER ********/
+
+    footer
+    {
+        width:100%;
+        background-color: #111;
+        border-radius: 0 0 15px 15px; 
+    }
+    
+    .footerContainer
+    {
+        padding: 5px 0 20px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footerContainer ul
+    {
+        list-style-type: none;
+        font-size: 15px;
+        display: flex;
+    }
+    
+    .footerContainer ul li 
+    {
+        margin: 0 10px 0 10px;
+    }
+    
+    .copyrights
+    {
+        direction: ltr;
+        color:#ffffff;
+        padding: 0px 0px 0px 10px;
+    }

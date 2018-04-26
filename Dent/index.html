@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta name="geo.placename" content="Moshe Goshen Ave 36, Kiryat Motzkin, Israel" />
+    <meta name="geo.position" content="32.8266365;35.0757045" />
+    <meta name="geo.region" content="IL-Haifa District" />
+    <meta name="ICBM" content="32.8266365, 35.0757045" /> -->
+    <title>מרכז אסתטיקה ורפואת שיניים</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/script.js"></script> 
+    <script type="text/javascript" src="js/geolocation.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <!-- main container of all divs -->
+    <div class="wrapper">
+        <header>
+                <!-- INFO TOP HEADER -->
+            <div class="topHeader">
+                <ul>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i>xxx@gmail.com</li>
+                    <li><i class="fa fa-phone-square" aria-hidden="true"></i><strong>צור קשר:</strong> 0547039199 </li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i><strong>מיקום:</strong> קרית מוצקין, שדרות משה גושן 36</li>
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="bottomHeader">
+                 <!-- MENU -->
+                <menu class="menu">
+                    <ul>
+                        <li><a href="index.html">ראשי</a></li>
+                        <li><a href="about_us.html">אודותינו</a></li>
+                        <li><a href="gallery.html">גלריה</a></li>
+                        <li><a href="contact_us.html">צור קשר</a></li>
+                        <li><img src="images\newlogosmall.png" alt=""></li>
+                    </ul>
+                </menu>
+            </div>
+             <!-- SLIDER -->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="./images/slider_img/AAA500.jpg" alt="">
+                </div>          
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="./images/slider_img/BBB500.jpg" alt="">
+                </div>       
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="./images/slider_img/CCC500.jpg" alt="">
+                </div>   
+                <button class="moveRight" onclick="" name="moveRight"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>   
+                <button class="moveLeft" onclick="" name="moveLeft"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>  
+                <button class="playSlider"><i id="playSlider" class="fa fa-play" aria-hidden="true"></i></button>
+                <button class="stopSlider"><i id="stopSlider" class="fa fa-stop" aria-hidden="true"></i></button>         
+            </div>
+            <br>              
+            <div class="positionDot">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+
+            <div class="logo"><img src="images/RainersClinicLogoNew.jpg"/>
+
+                <!-- PERSIONAL DITAILS FORM -->
+                <div class="formWrapper">
+                    <h2 class="formTitle">תאמו עכשיו פגישת ייעוץ</h2>
+                    <p>לתאום ופגישת ייעוץ חינם ללא התחייבות השאירו פרטים בטופס</p>
+                    <!-- action="http://localhost:3000/users" method="POST" -->
+                    <form id ="myForm" >
+                        <div class="firstNameInput">
+                            <input type="text" class="firstName" name="firstName" placeholder="שם פרטי*" minlength="2" maxlength="8">
+                            <input type="text" class="lastName" name="lastName" placeholder="שם משפחה*" minlength="2" maxlength="10">
+                        </div>
+                        <div class="PhoneEmailInput">
+                            <input type="text" class="phone" name="phone" placeholder="טלפון*" minlength="7"  maxlength="11">
+                            <input type="text" class="email" name="email" placeholder="דואל*" >
+                        </div>
+                        <textarea type="text" name="moreInfo" placeholder="הודעה"></textarea>
+                        <div class="send">
+                            <div class="agree">
+                                <input type="checkbox" id="check" name="receiveUpdates" value=item.receiveUpdates>אשמח לקבל מידע בעתיד
+                            </div>
+                            <input  type="submit" value="שלח טופס"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header> 
+        <content>
+                <!-- SECTIONS -->
+            <div class="longSection">
+                <div class="section">
+                    <div class="circleWrapper">
+                        <div class="circle" title=""><img src="images\tooth.png"></div>
+                    </div>
+                    <div class="title">רפואת שיניים</div>
+                    <div class="description">
+                        <p>טיפולי שיניים בהרדמה מלאה הולכים והופכים לנפוצים יותר ויותר בשנים האחרונות, במרפאתנו ניתן לפציינט להפגש עם הרופא המרדים ולתאם עמו עצמאית.
+                        </p>
+                    </div>
+                    <div class="moreInfoWrapper">
+                        <button class="sectionButton"><a href="./longsection/dentistry.html">פרטים נוספים</a></button>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="circleWrapper">
+                        <div class="circle" title=""><img src="images\tooth2.png"></div>
+                    </div>
+                    <div class="title">אסתטיקה</div>
+                    <div class="description">
+                        <p>אם גם אתם אכן נמנים על המטופלים שדי במחשבה על ביקור אצל רופאי שיניים בודאי תשמחו לשמוע על הפיתרון החדש- השתלות שיניים בהרדמה מלאה.</p>
+                    </div>
+                    <div class="moreInfoWrapper">
+                        <button class="sectionButton"><a href="./longsection/aesthetics.html">פרטים נוספים</a></button>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="circleWrapper">
+                        <div class="circle" title=""><img src="images\tooth3.png"></div>
+                    </div>
+                    <div class="title">רפואה משלימה</div>
+                    <div class="description">
+                        <p>היום כבר אין צורך בשיניים תותבות. שיטת All on 4, המיושמת על ידי ד"ר רפאל בבקוב, מאפשרת השתלת שיניים ביום אחד בלבד, ללא צורך בהשתלת עצם והרמת רצפת הסינוס. היחידי שנותן אחריות של 20 שנה על השתל !
+                        </p>
+                    </div>
+                    <div class="moreInfoWrapper">
+                        <button class="sectionButton"><a href="./longsection/alternative.html">פרטים נוספים</a></button>
+                    </div>    
+                </div>
+            </div>
+              <!-- VIDEOS -->
+                <div class="map-container">
+                    <div class= "infoLocation">
+                        <h2>מיקום המרפאה</h2>
+                        <h3>כתובת:</h3>
+                        <p>קרית מוצקין, שדרות משה גושן 36</p>
+                    </div>
+                    <div id="map"></div>
+                </div>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?v=3.27&key=AIzaSyA-GMu4mUkpABj8IA3Ih4uJ0l3GXGjAFOw&language=iw&signed_in=true&callback=initMap">
+                </script>
+            <div class="videoSection">
+                <iframe width="24%" height="200" src="https://www.youtube.com/embed/JCFnugyfuWA" frameborder="0" allowfullscreen></iframe>
+                <iframe width="24%" height="200" src="https://www.youtube.com/embed/4MCbvfk1RCA" frameborder="0" allowfullscreen></iframe>
+                <iframe width="24%" height="200" src="https://www.youtube.com/embed/JPfoI_wJ04I" frameborder="0" allowfullscreen></iframe>
+                <iframe width="24%" height="200" src="https://www.youtube.com/embed/JCwBMEnTTR4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </content>
+        <footer>
+            <div class="footerContainer">
+                <ul>
+                    <li><a href="contact_us.html">צור קשר</a></li>
+                    <li><a href="#">רפאל בתקשורת</a></li>
+                    <li><a href="#">שאלות נפוצות</a></li>
+                    <li><a href="#">All On 4</a></li>
+                    <li><a href="#">לפני ואחרי </a></li>
+                    <li><a href="#">שירותי המרפאה</a></li>
+                </ul>
+                <div class="copyrights">
+                    &copy; Copyrights 2017. All rights reserved 
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
