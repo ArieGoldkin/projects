@@ -1,0 +1,815 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Nunito Sans', sans-serif;
+  background-image: url("../images/Odds_Magic_Website_1920px2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+body * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body h3 {
+  font-size: 45px;
+  font-weight: normal;
+}
+
+ul, nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.lightbox {
+  color: #fff;
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox .lightbox-container {
+  background-color: #575C6E;
+  margin-top: 50px;
+  width: 50%;
+  padding: 10px 10px 30px 10px;
+  border-radius: 5px;
+}
+
+.lightbox .lightbox-container h3 {
+  margin-top: 0;
+}
+
+.lightbox .lightbox-container .close-btn {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.lightbox .lightbox-container .close-btn > * img {
+  width: 15px;
+}
+
+.lightbox .lightbox-container .download-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox .lightbox-container .download-btn > * img {
+  margin: 0px 15px 0 20px;
+  width: 20px;
+}
+
+.lightbox .lightbox-container .btn {
+  border: 0;
+  border-radius: 5px;
+  width: 30%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.lightbox .lightbox-container .lightbox-google-play {
+  background-color: #9DBF15;
+  box-shadow: 0px 4px #657B0F;
+}
+
+.lightbox .lightbox-container .lightbox-app-store {
+  background-color: #e00d0d;
+  box-shadow: 0px 4px #BB3434;
+  opacity: 0.7;
+}
+
+.lightbox .lightbox-container .lightbox-app-store a {
+  margin-top: 5px;
+}
+
+.lightbox.lightbox-center {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.wrapper header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.wrapper header > * .logo {
+  width: 200px;
+}
+
+.wrapper header nav {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.wrapper header nav li {
+  margin-right: 30px;
+}
+
+.wrapper header .menu-toggle {
+  display: none;
+}
+
+.wrapper header .label-toggle {
+  display: none;
+}
+
+.wrapper section {
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.wrapper section.download {
+  flex-direction: column;
+}
+
+.wrapper section.download .download-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper section.download .download-content .banner-wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.wrapper section.download .download-content .banner-wrapper .banner-text-area {
+  color: #fff;
+  text-align: center;
+  padding: 50px 35px;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.wrapper section.download .download-content .banner-wrapper .banner-text-area > *.title {
+  font-size: 35px;
+  margin-top: 0;
+}
+
+.wrapper section.download .download-content .banner-wrapper .banner-text-area > *.title span {
+  font-weight: bold;
+}
+
+.wrapper section.download .download-content .banner-wrapper .banner-text-area p {
+  font-size: 20px;
+}
+
+.wrapper section.download .download-content .banner-wrapper .banner-text-area button {
+  outline: none;
+  font-size: 25px;
+  width: 240px;
+  height: 60px;
+  background-color: #9DBF15;
+  border-radius: 8px;
+  box-shadow: 0px 4px #657B0F;
+  border: 0;
+  margin-top: 15px;
+}
+
+.wrapper section.download .download-content .banner-wrapper .age {
+  width: 50%;
+  padding: 50px 0 0 0;
+}
+
+.wrapper section.download .download-content .player {
+  width: 36%;
+}
+
+.wrapper section.get-free {
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+.wrapper section.get-free .get-free-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.wrapper section.get-free .get-free-content .nexus {
+  margin-top: -100px;
+  width: 40%;
+  max-width: 400px;
+}
+
+.wrapper section.get-free .get-free-content .get-free-banner {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wrapper section.get-free .get-free-content .get-free-banner p {
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
+.wrapper section.get-free .get-free-content .get-free-banner .google-play {
+  background-color: #9DBF15;
+  box-shadow: 0px 4px #657B0F;
+}
+
+.wrapper section.get-free .get-free-content .get-free-banner .app-store {
+  background-color: #e00d0d;
+  opacity: 0.5;
+  margin-top: 30px;
+}
+
+.wrapper section.get-free .get-free-content .get-free-banner .app-store a {
+  margin-top: 5px;
+}
+
+.wrapper section.get-free .get-free-content .get-free-banner .google-play, .wrapper section.get-free .get-free-content .get-free-banner .app-store {
+  outline: none;
+  font-size: 25px;
+  width: 300px;
+  height: 80px;
+  border-radius: 8px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wrapper section.get-free .get-free-content .get-free-banner .google-play img, .wrapper section.get-free .get-free-content .get-free-banner .app-store img {
+  margin: 0 20px 0 40px;
+  width: 25px;
+}
+
+.wrapper section.app-features {
+  justify-content: space-between;
+}
+
+.wrapper section.app-features .features {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wrapper section.app-features .features .features-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.wrapper section.app-features .features .features-content .top-content, .wrapper section.app-features .features .features-content .bottom-content {
+  width: 100%;
+  display: flex;
+}
+
+.wrapper section.app-features .features .features-content .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 150px;
+}
+
+.wrapper section.app-features .features .features-content .box p {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.wrapper section.app-features .features .features-content .box .odds-comparison {
+  width: 100px;
+  height: 100px;
+  background: url("../images/app-features_row.png") 0 0;
+}
+
+.wrapper section.app-features .features .features-content .box .hot-games {
+  width: 100px;
+  height: 100px;
+  background: url("../images/app-features_row.png") 548px 0;
+}
+
+.wrapper section.app-features .features .features-content .box .advanced-odds {
+  width: 100px;
+  height: 100px;
+  background: url("../images/app-features_row.png") 447px 0;
+}
+
+.wrapper section.app-features .features .features-content .box .expert-tips {
+  width: 100px;
+  height: 100px;
+  background: url("../images/app-features_row.png") 346px 0;
+}
+
+.wrapper section.app-features .features .features-content .box .best-odds {
+  width: 100px;
+  height: 100px;
+  background: url("../images/app-features_row.png") 243px 0;
+}
+
+.wrapper section.app-features .features .features-content .box .easy-to-use {
+  width: 100px;
+  height: 100px;
+  background: url("../images/app-features_row.png") 140px 0;
+}
+
+.wrapper section.app-features .image-features {
+  width: 50%;
+}
+
+.wrapper section.app-features .image-features img {
+  width: 100%;
+  padding-top: 230px;
+}
+
+.wrapper section.why-download {
+  height: 1176px;
+}
+
+.wrapper section.why-download .text-content {
+  padding-bottom: 35px;
+}
+
+.wrapper section.why-download .central {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper section.why-download .central h3 {
+  margin-top: 0;
+}
+
+.wrapper section.why-download .central p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.wrapper section.why-download .central ul {
+  font-size: 15px;
+  list-style-type: disc;
+}
+
+.wrapper section.why-download .central #slider ul li {
+  width: 100%;
+}
+
+.wrapper section.why-download .central button {
+  font-size: 30px;
+  width: 370px;
+  height: 90px;
+  background-color: #9DBF15;
+  border-radius: 8px;
+  box-shadow: 0px 4px #657B0F;
+  border: 0;
+  margin: 15px 0 0 0;
+}
+
+.wrapper section.about {
+  height: 948px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  padding-top: 165px;
+  justify-content: flex-start;
+}
+
+.wrapper section.about h3 {
+  margin-top: 0;
+}
+
+.wrapper section.about p {
+  font-size: 20px;
+}
+
+.wrapper section.terms {
+  height: 680px;
+}
+
+.wrapper section.terms .terms-content {
+  width: 80%;
+}
+
+.wrapper section.terms .terms-content h3 {
+  margin-top: 0;
+}
+
+.wrapper section.terms .terms-content span {
+  font-weight: bold;
+}
+
+.wrapper section.contact {
+  height: 770px;
+  width: 70%;
+  color: #fff;
+}
+
+.wrapper section.contact img {
+  width: 50%;
+}
+
+.wrapper section.contact .form-wrapper {
+  width: 40%;
+}
+
+.wrapper section.contact .form-wrapper h3 {
+  margin: 0;
+}
+
+.wrapper section.contact .form-wrapper p {
+  margin: 0 0 50px 0;
+}
+
+.wrapper section.contact .form-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper section.contact .form-wrapper form input, .wrapper section.contact .form-wrapper form textarea {
+  color: #fff;
+  width: 100%;
+  font-size: 15px;
+  padding-left: 10px;
+  margin-top: 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  line-height: 30px;
+  height: 50px;
+  border: 1px solid #fff;
+  outline: none;
+}
+
+.wrapper section.contact .form-wrapper form input[type=number]::-webkit-inner-spin-button,
+.wrapper section.contact .form-wrapper form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.wrapper section.contact .form-wrapper form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper section.contact .form-wrapper form textarea {
+  resize: none;
+  height: 150px;
+}
+
+.wrapper section.contact .form-wrapper form button {
+  font-size: 18px;
+  background-color: #9DBF15;
+  border-radius: 5px;
+  box-shadow: 0px 3px #657B0F;
+  outline: none;
+  border: 0;
+  width: 170px;
+  color: #fff;
+  height: 50px;
+  align-self: flex-end;
+  margin-top: 15px;
+}
+
+.wrapper section.footer {
+  width: 30%;
+  flex-direction: column;
+  height: 370px;
+  padding-top: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.wrapper section.footer .footer-icons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.wrapper section.footer ul {
+  color: #fff;
+  display: flex;
+  padding: 0;
+}
+
+.wrapper section.footer ul li {
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid;
+  line-height: 13px;
+}
+
+.wrapper section.footer ul li:last-child {
+  border-right: none;
+}
+
+#slider, #slider2 {
+  position: relative;
+  overflow: hidden;
+}
+
+#slider ul, #slider2 ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 640px;
+  list-style: none;
+}
+
+#slider ul li, #slider2 ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.prev, .next, .prev2, .next2 {
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+    background-image: url("../images/Odds_Magic_Website_1280px.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+  body h3 {
+    font-size: 30px;
+  }
+  .wrapper {
+    width: 80%;
+  }
+  .wrapper header {
+    padding-top: 8px;
+  }
+  .wrapper header > * .logo {
+    width: 150px;
+  }
+  .wrapper header nav {
+    font-size: 12px;
+    padding-top: 18px;
+  }
+  .wrapper header nav li {
+    margin-right: 28px;
+  }
+  .wrapper section {
+    width: 100%;
+  }
+  .wrapper section.download .download-content .banner-wrapper .banner-text-area {
+    padding: 35px 20px;
+  }
+  .wrapper section.download .download-content .banner-wrapper .banner-text-area > *.title {
+    font-size: 33px;
+  }
+  .wrapper section.download .download-content .banner-wrapper .banner-text-area p {
+    font-size: 18px;
+  }
+  .wrapper section.download .download-content .banner-wrapper .banner-text-area button {
+    font-size: 18px;
+    width: 175px;
+    height: 45px;
+    border-radius: 6px;
+    box-shadow: 0px 2px #657B0F;
+    margin-top: 12px;
+  }
+  .wrapper section.download .download-content .banner-wrapper .age {
+    width: 45%;
+    padding-top: 40px;
+  }
+  .wrapper section.download .download-content .player {
+    width: 33%;
+    margin-top: -43px;
+  }
+  .wrapper section.get-free {
+    margin-top: 47px;
+  }
+  .wrapper section.get-free .get-free-content .nexus {
+    margin-top: -130px;
+    width: 35%;
+  }
+  .wrapper section.get-free .get-free-content .get-free-banner p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .wrapper section.get-free .get-free-content .get-free-banner .google-play {
+    background-color: #9DBF15;
+    box-shadow: 0px 4px #657B0F;
+  }
+  .wrapper section.get-free .get-free-content .get-free-banner .app-store {
+    background-color: #e00d0d;
+    opacity: 0.5;
+    margin-top: 30px;
+  }
+  .wrapper section.get-free .get-free-content .get-free-banner .app-store a {
+    margin-top: 5px;
+  }
+  .wrapper section.get-free .get-free-content .get-free-banner .google-play, .wrapper section.get-free .get-free-content .get-free-banner .app-store {
+    font-size: 20px;
+    width: 260px;
+    height: 65px;
+  }
+  .wrapper section.get-free .get-free-content .get-free-banner .google-play img, .wrapper section.get-free .get-free-content .get-free-banner .app-store img {
+    margin: -2px 15px 0 35px;
+    width: 20px;
+  }
+  .wrapper section.app-features {
+    height: 500px;
+  }
+  .wrapper section.app-features .features .features-content .top-content, .wrapper section.app-features .features .features-content .bottom-content {
+    width: 100%;
+    display: flex;
+  }
+  .wrapper section.app-features .features .features-content .box p {
+    font-size: 13px;
+  }
+  .wrapper section.app-features .features .features-content .box .odds-comparison {
+    width: 6.4vw;
+    height: 6.4vw;
+    background-size: 655% 100%;
+    background-position: 0 0;
+  }
+  .wrapper section.app-features .features .features-content .box .hot-games {
+    width: 6.4vw;
+    height: 6.4vw;
+    background-size: 636% 100%;
+    background-position: 18.4% 0;
+  }
+  .wrapper section.app-features .features .features-content .box .advanced-odds {
+    width: 6.4vw;
+    height: 6.4vw;
+    background-size: 636% 100%;
+    background-position: 36.8% 0;
+  }
+  .wrapper section.app-features .features .features-content .box .expert-tips {
+    width: 6.4vw;
+    height: 6.4vw;
+    background-size: 636% 100%;
+    background-position: 55% 0;
+  }
+  .wrapper section.app-features .features .features-content .box .best-odds {
+    width: 6.4vw;
+    height: 6.4vw;
+    background-size: 636% 100%;
+    background-position: 74% 0;
+  }
+  .wrapper section.app-features .features .features-content .box .easy-to-use {
+    width: 6.4vw;
+    height: 6.4vw;
+    background-size: 636% 100%;
+    background-position: 93% 0;
+  }
+  .wrapper section.app-features .image-features {
+    width: 45%;
+  }
+  .wrapper section.app-features .image-features img {
+    padding-top: 120px;
+  }
+  .wrapper section.why-download {
+    height: 960px;
+  }
+  .wrapper section.why-download .text-content {
+    padding-bottom: 35px;
+  }
+  .wrapper section.why-download .central {
+    width: 80%;
+  }
+  .wrapper section.why-download .central h3 {
+    margin-bottom: 20px;
+  }
+  .wrapper section.why-download .central p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .wrapper section.why-download .central ul {
+    font-size: 13px;
+  }
+  .wrapper section.why-download .central #slider ul li {
+    width: 85%;
+  }
+  .wrapper section.why-download .central #slider ul li img {
+    width: 100%;
+  }
+  .wrapper section.why-download .central button {
+    font-size: 23px;
+    width: 280px;
+    height: 62px;
+    border-radius: 5px;
+  }
+  .wrapper section.about {
+    height: 638px;
+    padding-top: 50px;
+  }
+  .wrapper section.about h3 {
+    margin-top: 0;
+  }
+  .wrapper section.about p {
+    font-size: 18px;
+  }
+  .wrapper section.terms {
+    height: 635px;
+  }
+  .wrapper section.terms .terms-content {
+    width: 80%;
+  }
+  .wrapper section.terms .terms-content h3 {
+    margin-top: 0;
+  }
+  .wrapper section.terms .terms-content span {
+    font-weight: bold;
+  }
+  .wrapper section.contact {
+    padding-top: 100px;
+    height: 770px;
+  }
+  .wrapper section.contact img {
+    width: 45%;
+  }
+  .wrapper section.contact .form-wrapper {
+    width: 40%;
+  }
+  .wrapper section.contact .form-wrapper p {
+    font-size: 15px;
+  }
+  .wrapper section.contact .form-wrapper form input, .wrapper section.contact .form-wrapper form textarea {
+    font-size: 13px;
+    padding-left: 8px;
+    margin-top: 15px;
+    height: 45px;
+  }
+  .wrapper section.contact .form-wrapper form textarea {
+    resize: none;
+    height: 150px;
+  }
+  .wrapper section.contact .form-wrapper form button {
+    font-size: 14px;
+    width: 130px;
+    height: 35px;
+  }
+  .wrapper section.footer {
+    width: 36%;
+    height: 120px;
+    padding-top: 0;
+    font-size: 13px;
+  }
+  .wrapper section.footer .footer-icons {
+    width: 100%;
+  }
+  .wrapper section.footer .footer-icons a img {
+    width: 80%;
+  }
+  .wrapper section.footer .footer-icons ul li {
+    line-height: 10px;
+  }
+  .wrapper section .prev, .wrapper section .next, .wrapper section .prev2, .wrapper section .next2 {
+    width: 6vw;
+  }
+  .wrapper section .prev img, .wrapper section .next img, .wrapper section .prev2 img, .wrapper section .next2 img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

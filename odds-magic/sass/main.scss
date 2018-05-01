@@ -1,0 +1,1112 @@
+// General style
+
+body {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    font-family: 'Nunito Sans', sans-serif;
+    background-image: url("../images/Odds_Magic_Website_1920px2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    & * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    h3 {
+        font-size: 45px;
+        font-weight: normal;
+    } 
+}
+
+ul, nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.lightbox {
+    color:#fff;
+    display:none;
+    position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+    background: rgba(0,0,0,0.8);
+    .lightbox-container {
+        background-color: #575C6E;
+        margin-top: 50px;
+        width: 50%;
+        padding: 10px 10px 30px 10px;
+        border-radius: 5px;
+        h3 {
+            margin-top: 0;
+        }    
+        .close-btn {
+            display: flex;
+            flex-direction: row-reverse;
+            & > * img {
+                width: 15px;
+            }
+        }
+        & .download-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & > * img {
+                margin: 0px 15px 0 20px;
+                width: 20px;
+            }
+        }
+        .btn {
+            border: 0;
+            border-radius: 5px;
+            width: 30%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+        .lightbox-google-play {
+            background-color: #9DBF15;
+            box-shadow: 0px 4px #657B0F;
+        }
+        .lightbox-app-store {
+            background-color: #e00d0d;
+            box-shadow: 0px 4px #BB3434;
+            opacity: 0.7;
+            & a {
+                margin-top: 5px;
+            }
+        } 
+    }
+    &.lightbox-center { 
+	outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+
+.wrapper    {
+    width:100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    header {
+        width: 100%;
+        display:flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: auto;
+        padding-top: 10px;
+        & > * .logo {
+            width:200px;
+        }
+        nav {
+            display:flex;
+            flex-direction: row;
+            font-size: 15px;
+            text-transform: uppercase;
+            padding-top:20px;
+            li {
+                margin-right:30px;
+            }
+        }
+        .menu-toggle {
+            display: none;
+        }
+        .label-toggle {
+            display: none;
+        }
+    }
+    section {
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        &.download {
+            flex-direction: column;
+            .download-content {
+                width:100%;
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+                .banner-wrapper {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    .banner-text-area {
+                        color: #fff;
+                        text-align: center;
+                        padding: 50px 35px;
+                        font-family: 'Nunito Sans', sans-serif;
+                        background-color: rgba(0, 0, 0, 0.85);
+                        & > *.title {
+                            font-size: 35px;
+                            margin-top: 0;
+                            & span {
+                                font-weight: bold;
+                            }
+                        }
+                        & p {
+                            font-size: 20px;
+                        }
+                        & button {
+                            outline: none;
+                            font-size: 25px;
+                            width: 240px;
+                            height: 60px;
+                            background-color: #9DBF15;
+                            border-radius: 8px;
+                            box-shadow: 0px 4px #657B0F;
+                            border: 0;
+                            margin-top: 15px;
+                        }
+                    }
+                    & .age {
+                        width: 50%;
+                        padding: 50px 0 0 0;
+                    }
+                }
+                .player {
+                    width: 36%;
+                }
+            }
+        }
+        &.get-free {
+            margin-top: 30px;
+            justify-content: space-around;
+            .get-free-content {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-around;
+                .nexus {
+                    margin-top: -100px;
+                    width: 40%;
+                    max-width: 400px;
+                }
+                .get-free-banner {
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    & p {
+                        font-size: 18px;
+                        margin-bottom: 45px;
+                    }
+                    .google-play {
+                        background-color: #9DBF15;
+                        box-shadow: 0px 4px #657B0F;
+                    }
+                    .app-store {
+                        background-color: #e00d0d;
+                        opacity: 0.5;
+                        margin-top: 30px;
+                        & a {
+                            margin-top: 5px;
+                        }
+                    } 
+                    .google-play, .app-store {
+                        outline: none;
+                        font-size: 25px;
+                        width: 300px;
+                        height: 80px;
+                        border-radius: 8px;
+                        border: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        & img {
+                            margin: 0 20px 0 40px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+        &.app-features {  
+            justify-content: space-between;
+            .features {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .features-content {
+                    display:flex;
+                    width: 100%;
+                    flex-direction: column;
+                    .top-content, .bottom-content {
+                        width: 100%;
+                        display: flex;
+                    }
+                    & .box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        flex-grow: 1;
+                        flex-basis: 150px;
+                        & p {
+                            text-transform: uppercase;
+                            font-size: 15px;
+                        }
+                        .odds-comparison {
+                            width:100px;
+                            height: 100px;
+                            background: url("../images/app-features_row.png") 0 0;
+                        }
+                        .hot-games {
+                            width: 100px;
+                            height: 100px;
+                            background: url("../images/app-features_row.png") 548px 0;
+                        }
+                        .advanced-odds {
+                            width: 100px;
+                            height: 100px;
+                            background: url("../images/app-features_row.png") 447px 0;
+                        }
+                        .expert-tips {
+                            width: 100px;
+                            height: 100px;
+                            background: url("../images/app-features_row.png") 346px 0; 
+                        }
+                        .best-odds {
+                            width: 100px;
+                            height: 100px;
+                            background: url("../images/app-features_row.png") 243px 0; 
+                        }
+                        .easy-to-use {
+                            width: 100px;
+                            height: 100px;
+                            background: url("../images/app-features_row.png") 140px 0; 
+                        }
+                    } 
+                }
+            }
+            & .image-features {
+                width: 50%;
+                & img {
+                    width: 100%;
+                    padding-top: 230px;
+                }
+            }
+        }
+        &.why-download {
+            height: 1176px;
+            .text-content {
+                padding-bottom: 35px;
+            }
+            .central {
+                display: flex;
+                width: 80%;
+                flex-direction: column;
+                align-items: center;
+                & h3 {  
+                    margin-top: 0; 
+                }
+                p {
+                    font-size: 15px;
+                    line-height: 20px;      
+                }
+                ul {
+                    font-size: 15px;
+                    list-style-type: disc;
+                }
+                #slider ul li {
+                    width: 100%;
+                }
+                
+
+                & button {
+                    font-size: 30px;
+                    width: 370px;
+                    height: 90px;
+                    background-color: #9DBF15;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px #657B0F;
+                    border: 0;
+                    margin: 15px 0 0 0;
+                }
+            }
+        }
+        &.about {
+            height: 948px;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: #fff;
+            padding-top: 165px;
+            justify-content: flex-start;
+            h3 {  
+                margin-top: 0;
+            }
+            p {
+                font-size: 20px;
+            }   
+        }
+        &.terms {
+            height: 680px;
+             .terms-content{
+                width: 80%;
+                h3 { 
+                    margin-top: 0;
+                }
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+        &.contact {
+            height: 770px;  
+            width: 70%;
+            color: #fff;
+            img {
+                width: 50%;
+            }
+            .form-wrapper {
+                width: 40%;
+                h3 {  
+                    margin: 0;
+                }
+                p {
+                    margin: 0 0 50px 0;
+                }
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    & input, textarea {
+                        color: #fff;
+                        width:100%;
+                        font-size: 15px;
+                        padding-left: 10px;
+                        margin-top: 20px;
+                        background-color: transparent;
+                        border-radius: 5px;
+                        line-height: 30px;
+                        height: 50px;
+                        border: 1px solid #fff;
+                        outline: none;
+                    }
+                    input[type=number]::-webkit-inner-spin-button, 
+                    input[type=number]::-webkit-outer-spin-button { 
+                        -webkit-appearance: none; 
+                    }
+                    input[type=number] {
+                        -moz-appearance:textfield;
+                    }
+                    & textarea {
+                        resize: none;
+                        height: 150px;
+                    }
+                    button {
+                        font-size: 18px;
+                        background-color: #9DBF15;
+                        border-radius: 5px;
+                        box-shadow: 0px 3px #657B0F;
+                        outline: none;
+                        border: 0;
+                        width: 170px;
+                        color: #fff;
+                        height: 50px;
+                        align-self: flex-end;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        &.footer { 
+            width: 30%;
+            flex-direction: column;
+            height: 370px;
+            padding-top: 200px;
+            align-items: center;
+            justify-content: space-evenly;
+            .footer-icons {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            ul {
+                color: #fff;
+                display: flex;
+                padding: 0;
+                li {
+                    margin-right: 5px;
+                    padding-right: 5px;
+                    border-right: 1px solid;
+                    line-height: 13px;
+                }
+                li:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
+#slider,#slider2 {
+    position: relative;
+    overflow: hidden;
+    & ul {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 640px;
+        list-style: none;
+        & li {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+.prev, .next, .prev2, .next2 {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+   
+    body {
+        margin: 0;
+        padding: 0;
+        width:100%;
+        font-family: 'Nunito Sans', sans-serif;
+        background-image: url("../images/Odds_Magic_Website_1280px.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        h3 {
+            font-size: 30px;
+        } 
+    }
+    .wrapper {
+        width: 80%;
+        header {
+            padding-top: 8px;
+            & > * .logo {
+                width:150px;
+            }
+            nav {
+                font-size: 12px;
+                padding-top:18px;
+                li {
+                    margin-right:28px;
+                }
+            }
+        }
+        section {
+            width: 100%;
+            &.download {
+                .download-content {
+                    .banner-wrapper {
+                        .banner-text-area {
+                            padding: 35px 20px;
+                            & > *.title {
+                                font-size: 33px;
+                            }
+                            & p {
+                                font-size: 18px;
+                            }
+                            & button {
+                                font-size: 18px;
+                                width: 175px;
+                                height: 45px;
+                                border-radius: 6px;
+                                box-shadow: 0px 2px #657B0F;
+                                margin-top: 12px;
+                            }
+                        }
+                        & .age {
+                            width: 45%;
+                            padding-top: 40px;
+                        }
+                    }
+                    .player {
+                        width: 33%;
+                        margin-top: -43px;
+                    }
+                }
+            }
+            &.get-free {
+                margin-top: 47px;
+                .get-free-content {
+                    .nexus {
+                        margin-top: -130px;
+                        width: 35%;
+                    }
+                    .get-free-banner {
+                        & p {
+                            font-size: 16px;
+                            margin-bottom: 40px;
+                        }
+                        .google-play {
+                            background-color: #9DBF15;
+                            box-shadow: 0px 4px #657B0F;
+                        }
+                        .app-store {
+                            background-color: #e00d0d;
+                            opacity: 0.5;
+                            margin-top: 30px;
+                            & a {
+                                margin-top: 5px;
+                            }
+                        } 
+                        .google-play, .app-store {
+                            font-size: 20px;
+                            width: 260px;
+                            height: 65px;
+                            & img {
+                                margin: -2px 15px 0 35px;
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.app-features {
+                height: 500px;
+                .features {
+                    .features-content {
+                        .top-content, .bottom-content {
+                            width: 100%;
+                            display: flex;
+                        }
+                        & .box {
+                            & p {
+                                font-size: 13px;
+                            }
+                            .odds-comparison {
+                                width: 6.4vw;
+                                height: 6.4vw;
+                                background-size: 655% 100%;
+                                background-position: 0 0;
+                            }
+                            .hot-games {
+                                width: 6.4vw;
+                                height: 6.4vw;
+                                background-size: 636% 100%;
+                                background-position: 18.4% 0;
+                            }
+                            .advanced-odds {
+                                width: 6.4vw;
+                                height: 6.4vw;
+                                background-size: 636% 100%;
+                                background-position: 36.8% 0;
+                                
+                            }
+                            .expert-tips {
+                                width: 6.4vw;
+                                height: 6.4vw;
+                                background-size: 636% 100%;
+                                background-position: 55% 0; 
+                            }
+                            .best-odds {
+                                width: 6.4vw;
+                                height: 6.4vw;
+                                background-size: 636% 100%;
+                                background-position: 74% 0; 
+                            }
+                            .easy-to-use {
+                                width: 6.4vw;
+                                height: 6.4vw;
+                                background-size: 636% 100%;
+                                background-position: 93% 0; 
+                            }
+                        } 
+                    }
+                }
+                & .image-features {
+                    width: 45%;
+                    & img {
+                        padding-top: 120px;
+                    }
+                }
+            }
+            &.why-download {
+                height: 960px;
+                .text-content {
+                    padding-bottom: 35px;
+                }
+                .central {
+                    width: 80%;
+                    & h3 {  
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 13px;
+                        line-height: 18px;     
+                    }
+                    ul {
+                        font-size: 13px;
+                    }
+                    #slider ul li {
+                        width: 85%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    & button {
+                        font-size: 23px;
+                        width: 280px;
+                        height: 62px;
+                        border-radius: 5px;
+                    }
+                }
+               
+            }
+            &.about {
+                height: 638px;
+                padding-top: 50px;
+                h3 {  
+                    margin-top: 0;
+                }
+                p {
+                    font-size: 18px;
+                }   
+            }
+            &.terms {
+                height: 635px;
+                 .terms-content{
+                    width: 80%;
+                    h3 { 
+                        margin-top: 0;
+                    }
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.contact {
+                padding-top: 100px;
+                height: 770px;
+                img {
+                    width: 45%;
+                }
+                .form-wrapper {
+                    width: 40%;
+                    p {
+                        font-size: 15px;
+                    }
+                    form {
+                        & input, textarea {
+                            font-size: 13px;
+                            padding-left: 8px;
+                            margin-top: 15px;
+                            height: 45px;
+                        }
+                        & textarea {
+                            resize: none;
+                            height: 150px;
+                        }
+                        button {
+                            font-size: 14px;
+                            width: 130px;
+                            height: 35px;
+                        }
+                    }
+                }
+            }
+            &.footer {
+                width: 36%;
+                height: 120px;
+                padding-top: 0;
+                font-size: 13px;
+                .footer-icons {
+                    width: 100%;
+                    a img {
+                        width: 80%;
+                    }
+                ul li {
+                        line-height: 10px;
+                    }
+                }
+            }
+            .prev, .next, .prev2, .next2 {
+                width: 6vw;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+// @media screen and (max-width: 1280px) {
+//     body {
+//         margin: 0;
+//         padding: 0;
+//         width:100%;
+//         height:100%;
+//         background-image: url("../images/Odds_Magic_Website_1280px.png");
+//         background-repeat: no-repeat;
+//         background-position: top;
+//         h3 {
+//             font-size: 3.3vw;
+//             font-weight: normal;
+//         }
+//         .lightbox {
+//             .lightbox-container {
+//                 margin-top: 5vw;
+//                 width: 50%;
+//                 padding: 1.6vh 1.6vh 5vh 1.6vh;
+//                 border-radius: 1vh;   
+//                 .close-btn {
+//                     & > * img {
+//                         width: 1.3vw;
+//                     }
+//                 }
+//                 p {
+//                     font-size: 2.5vh;
+//                 }
+//                 & .download-btn {
+//                     & > * img {
+//                         margin: 0px 2.4vh 0 3.2vh;
+//                         width: 1.6vw;
+//                     }
+//                 }
+//                 .btn {
+//                     border-radius: 0.9vh;
+//                     height: 4.2vw;
+//                     font-size: 2.3vh;
+//                 }
+//                 .lightbox-google-play {
+//                     box-shadow: 0px 0.6vh #657B0F;
+//                 }
+//                 .lightbox-app-store {
+//                     box-shadow: 0px 0.6vh #BB3434;
+//                     & a {
+//                         margin-top: 0.8vh;
+//                     }
+//                 } 
+//             }
+//         }
+//         .wrapper { 
+//             width:95%;
+//             header {
+//                 padding-top:1.1vh;
+//                 & > * .logo {
+//                         width: 14.7vw;
+//                     }
+//                     nav {
+//                         font-size: 1.3vw;
+//                         li {
+//                         margin-right:2.2vw;
+//                     }
+//                 }
+//             }
+//             section {
+//                 &.download {
+//                     height: 53vh;
+//                     .download-content {
+//                         justify-content: center;
+//                         .banner-wrapper {
+//                             .banner-text-area {
+//                                 padding: 2vw 1.1vw;
+//                                 .title {
+//                                     font-size: 2.7vw; 
+//                                 }
+//                                 & p{
+//                                     font-size: 1.4vw;
+//                                 }
+//                                 & button {
+//                                     font-size: 1.8vw;
+//                                     width: 18vw;
+//                                     height: 4.4vw;
+//                                     border-radius: 0.6vw;
+//                                     box-shadow: 0px 0.3vw #657B0F;
+//                                     margin: 1.1vw 0 0 0;
+//                                 }
+//                             }
+//                             & .age {
+//                                 width: 40%;
+//                                 padding: 2.6vmin 0 0 0;
+//                             }
+//                         }
+//                         .player {
+//                             width: 27%;
+//                             margin-left: 13vmin;
+//                         }
+//                     }
+//                 }
+//                 &.get-free {
+//                     height: 38.3vw;
+//                     margin-top: 2.2vw;
+//                     .get-free-content {
+//                         .nexus {
+//                             margin-top: -7.4vw;
+//                             max-width: 29.3vw;
+//                         }
+//                         .get-free-banner {
+//                             h3 {
+//                                 margin: 0;
+//                             }
+//                             & p {
+//                                 font-size: 1.3vw;
+//                                 margin-bottom: 3.3vw;
+//                             }
+//                             .google-play {
+//                                 box-shadow: 0px 4px #657B0F;
+//                             }
+//                             .app-store {
+//                                 margin-top: 4.2vh;
+//                                 & a {
+//                                     margin-top: 1vh;
+//                                 }
+//                             } 
+//                             .google-play, .app-store {
+//                                 font-size: 1.9vw;
+//                                 width: 22vw;
+//                                 height: 5.8vw;
+//                                 border-radius: 0.6vw;
+//                                 & img { 
+//                                     margin: 0 1.5vw 0 3vw;
+//                                     width: 1.9vw;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//                 &.app-features {
+//                     height: 29.6vw;
+//                     margin-top: 2vh;
+//                     justify-content: space-around;
+//                     .features {
+//                         width: 45%;
+//                         .features-content {
+//                             .top-content, .bottom-content {
+//                                 width: 100%;
+//                                 display: flex;
+//                             }
+//                             & .box {
+//                                 flex-basis: 11vw;
+//                                 & p {
+//                                     font-size: 1.1vw;
+//                                 }
+//                                 .odds-comparison {
+//                                     width: 7.4vw;
+//                                     height: 7.4vw;
+//                                     background-size: 655% 100%;
+//                                     background-position: 0 0;
+//                                 }
+//                                 .hot-games {
+//                                     width: 7.4vw;
+//                                     height: 7.4vw;
+//                                     background-size: 636% 100%;
+//                                     background-position: 18.4% 0;
+//                                 }
+//                                 .advanced-odds {
+//                                     width: 7.4vw;
+//                                     height: 7.4vw;
+//                                     background-size: 636% 100%;
+//                                     background-position: 36.8% 0;
+                                    
+//                                 }
+//                                 .expert-tips {
+//                                     width: 7.4vw;
+//                                     height: 7.4vw;
+//                                     background-size: 636% 100%;
+//                                     background-position: 55% 0; 
+//                                 }
+//                                 .best-odds {
+//                                     width: 7.4vw;
+//                                     height: 7.4vw;
+//                                     background-size: 636% 100%;
+//                                     background-position: 74% 0; 
+//                                 }
+//                                 .easy-to-use {
+//                                     width: 7.4vw;
+//                                     height: 7.4vw;
+//                                     background-size: 636% 100%;
+//                                     background-position: 93% 0; 
+//                                 }
+//                             } 
+//                         }
+//                     }
+//                     & .image-features {
+//                         width: 45%;
+//                         & img {
+//                             width: 85%;
+//                             padding-top: 16.9vh;
+//                         }
+//                     }
+//                 }
+//                 &.why-download {
+//                     height: 76vw;
+//                     width: 90%;
+//                     margin-top: 11vh;
+//                     .text-content {
+//                         padding-bottom: 3vh;
+//                         h3 {
+//                             margin-bottom: 4vh;
+//                         }
+//                     }
+//                     .central {
+//                         display: flex;
+//                         width: 80%;
+//                         flex-direction: column;
+//                         align-items: center;
+//                         p {
+//                             font-size: 1.2vw;
+//                             line-height: 2vw;
+//                         }
+//                         ul {
+//                             font-size: 1.2vw;
+//                         }
+//                         #slider ul li {
+//                             width: 78%;
+//                             img {
+//                                 width: 100%;
+//                             }
+//                         }
+//                         & button {
+//                             font-size: 2vw;
+//                             width: 23vw;
+//                             height: 5vw;
+//                             border-radius: 1.3vh;
+//                             box-shadow: 0px 0.3vw #657B0F;
+//                             margin-top: 1.2vw;
+//                         }
+//                     }
+//                     .prev, .next {
+//                         width: 7vw;
+//                         img {
+//                             width: 100%;
+//                         }
+//                     }
+//                 }
+//                 &.about {   
+//                     height: 50vw;
+//                     width: 80%;
+//                     padding-top: 6vh;
+                    
+//                     h3 {  
+//                         margin-top: 0;
+//                     }
+//                     p {
+//                         font-size:  2.8vmin;
+//                     }   
+//                 }
+//                 &.terms {
+//                     height: 59vw;
+//                     padding-top: 5vh;
+//                     .prev2, .next2 {
+//                         width: 7vw;
+//                         img {
+//                             width: 100%;
+//                         }
+//                     }
+//                      .terms-content{
+//                         width: 80%;
+//                         padding-top: 9vw;
+//                         h3 { 
+//                             margin-top: 0;
+//                         }
+//                         p {
+//                             font-size: 2.6vmin;
+//                         }
+//                         span {
+//                             font-weight: bold;
+//                             font-size: 2.6vmin;
+//                         }
+//                         #slider2 ul {
+//                             height: 40vw;
+//                             li {
+//                                 height: 40vw;
+//                                 width: 90%;
+//                                 align-items: center;
+//                                 img {
+//                                     width: 100%;
+//                                 }
+//                             }
+//                         }     
+//                     }
+//                 }
+//                 &.contact {
+//                     height: 51vw;  
+//                     width: 62%;
+//                     img {
+//                         width: 50%;
+//                     }
+//                     .form-wrapper {
+//                         width: 43%;
+//                         h3 {  
+//                             margin: 0;
+//                         }
+//                         p {
+//                             margin-bottom: 3vh;
+//                             font-size: 2.5vh;
+//                         }
+//                         form {
+//                             & input, textarea {
+//                                 width: 100%;
+//                                 font-size: 1.2vw;
+//                                 padding-left: 0.9vw;
+//                                 margin-top: 2.8vh;
+//                                 border-radius: 1vh;
+//                                 line-height: 5vh;
+//                                 height: 8.2vh;
+//                             }
+//                             & textarea {
+//                                 height: 12.3vw;
+//                             }
+//                             button {
+//                                 font-size: 3vh;
+//                                 border-radius: 0.5vw;
+//                                 box-shadow: 0px 0.3vw #657B0F;
+//                                 width: 13vw;
+//                                 height: 4.3vw;
+//                                 margin-top: 2.5vh;
+//                             }
+//                         }
+//                     }
+//                 }
+//                 &.footer { 
+//                     width: 32%;
+//                     padding-top: 5vw;
+//                     height: 15vw;
+//                     .footer-icons {
+//                         width: 100%;
+//                         a .facebook {
+//                             width: 1.6vw;
+//                         }
+//                         a .twitter {
+//                             width: 3vw;
+//                         }
+//                     }
+//                     ul {
+//                         padding: 0;
+//                         font-size: 2.4vh;
+//                         li {
+//                             margin-right: 1vh;
+//                             padding-right: 1vh;
+//                             border-right: 0.1vw solid;
+//                             line-height: 2.5vh;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
