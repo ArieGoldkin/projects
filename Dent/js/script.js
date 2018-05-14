@@ -30,66 +30,57 @@ $(document).ready(function() {
 
 //    var slides = [ [img1,dot1],[],[] ]
 
-   //object oriented 
+   //for refactor - object oriented 
 
    //SLIDER IMAGE
    
-    var stopButton = document.querySelector("#stopSlider"); 
-    var playButton = document.querySelector(".playSlider");
-    var rightButton = document.querySelector(".moveRight");
-    var leftButton = document.querySelector(".moveLeft");
+    var slideIndex = 0;
+    var time = 3000;
+    var playing = true;
+    var slideInterval = setInterval(init, time);
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
-    var slideIndex = 0;
-    var slide = init();
-    var switchDots = dot();
-    var slideInterval = setInterval(init,3000);
 
+   
     //this is the function that runs the images
     function init() {
-        for (i = 0; i < slides.length; i++) {
+        for (var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none"; 
         }
         slideIndex++;
         if (slideIndex > slides.length) {
         slideIndex = 1;
         }
-        slides[slideIndex-1].style.display = "block"; 
-    }
-
-    //this function is changing the dots 
-    function dot() {
         for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+            dots[i].className = dots[i].className.replace(" active", "");
         }
+        slides[slideIndex-1].style.display = "block"; 
         dots[slideIndex-1].className += " active";
     }
 
-    playButton.addEventListener("click", function(){
-        setInterval(init,3000);
+    
+
+    $('.playSlider').click(function(){
+        if(playing = true ){
+            clearInterval(slideInterval);
+        }
+        return slideInterval = setInterval(init, time);   
     });
 
-    stopButton.addEventListener("click", function(){
+    $('.stopSlider').click(function(){
         clearInterval(slideInterval);
     });
 
-
-    rightButton.addEventListener("click", function(){
-        var slide = init();
-        //check if init in setinterval
-        if(slide == slideInterval){
-            //stop the slider
-            clearInterval();
-        } else {
-        //move one to the right
-            init();
-        };
+    $('.moveRight').click(function(){
+        init(slideIndex++);
     });
 
-    leftButton.addEventListener("click", function(){
-        
+    $('.moveLeft').click(function(){
+        init(slideIndex-1);
     });
 
+    // form verification
+    
     $('#myForm').submit(function (e) {
   
         e.preventDefault();
