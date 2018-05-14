@@ -124,12 +124,14 @@ body
     padding: 1px 17px;
     border-radius: 10px;
     text-decoration: none;
+    transition: all .30s ease-in-out;
+    
 }
         
 .menu ul li a:hover
 {
     background-color: #333;        
-    color: rgb(181, 186, 187);        
+    color: rgb(181, 186, 187); 
 }
         
 
@@ -176,7 +178,7 @@ body
     text-align:center;  
 }
 
-.active 
+.active, .dot:hover 
 {
     background-color: #717171;
 }
@@ -203,6 +205,10 @@ body
   
  
 /* NAVIGATION BUTTONS SLIDER */
+.moving 
+{
+    transition: all .30s ease-in-out;
+}
 
 .moveLeft    
 {
