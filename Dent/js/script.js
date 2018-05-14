@@ -80,7 +80,7 @@ $(document).ready(function() {
     });
 
     // form verification
-    
+
     $('#myForm').submit(function (e) {
   
         e.preventDefault();
@@ -90,73 +90,45 @@ $(document).ready(function() {
             if(element.length) {
                 var elementValue = element.val();
                 if(elementValue) {
+
                     LegalChars = new RegExp("^[a-zA-Z\-\u0590-\u05FF ]+$");
+                    var nameReg = /^[A-Za-z]+$/;
                     var numberReg = /^[0-9]+$/;
+                    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
                     // console.log(inputName + " value: " + elementValue); //test
                     if(inputName == inputsArray[0] || inputName == inputsArray[1]) { // firstName or lastName
                         if (!LegalChars.test(elementValue)){
-                            // innerText someting went wrong
-                            return false;
-                        } else {
-                        return elementValue;
-                        }
-                        
+                            document.getElementById("firstName").innerHTML = "שדה חובה";
+                            console.log('only letters');
+                            console.log(inputName + " value: " + elementValue); 
+                            debugger;
+                        } 
+                        return false;
                     }
                     else if (inputName == inputsArray[2]) { // phone
-                        debugger;
                         if (!numberReg.test(elementValue)) {
                             console.log("numbers only!");
-                        } else {
-                           console.log(elementValue);
+                            console.log(inputName + " value: " + elementValue);
+                            debugger;
                         }
+                        return false;
                        
                     }
                     else if (inputName == inputsArray[3]) { // email
-                        return;
+                        if(!emailReg.test(elementValue)) {
+                            console.log("email must be filed");
+                            console.log(inputName + " value: " + elementValue);
+                            debugger;
+                        }
                     }       
-                    return;             
+                    return false;             
                 }
             }
             else {
                 console.log(inputName + " element not found");
-            }
-                        
+            }           
         });
-
-
-
-
-        
-        // var firstNameElement = $('.firstName');
-        // if(firstNameElement) {
-        //     var firstNameValue = firstNameElement.val();
-        // }
-        
-
-        
-        // var fname = $('.firstName').val();
-        // var lastName = $('.lastName').val();
-        // var phone = $('.phone').val();
-        // var fname = $('.email').val();
-       
-        // if(!fname) {
-        //     $('.errorBox').css("visibility", "visible");
-        //     $('.errorBox').innerText = "First name is required";
-        //     return false;
-        // }
-        // if(!lastName) {
-        //     alert("lastname not found");
-        //     return false;
-        // }
-        // if(!phone) {
-        //     alert("phone not found");
-        //     return false;
-        // }
-        // if(!email) {
-        //    alert("email not found");
-        //     return false;
-        // }
       });
 }); //END READY
 
