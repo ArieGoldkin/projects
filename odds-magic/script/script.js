@@ -24,11 +24,11 @@ $(document).ready(function(){
 
     // SLIDER// WHY DOWNLOAD//
 	
-	var Slider = function(element,prevArrow,nextArrow) {
-        var slideCount = $(element + ' ul li').length;
-        var slideWidth = $(element + ' ul li').width();
-        var slideHeight = $(element + ' ul li').height();
-        var sliderUlWidth = slideCount * slideWidth;
+	const Slider = function(element,prevArrow,nextArrow) {
+        const slideCount = $(element + ' ul li').length;
+        const slideWidth = $(element + ' ul li').width();
+       	const slideHeight = $(element + ' ul li').height();
+        const sliderUlWidth = slideCount * slideWidth;
         
         $(element).css({ width: slideWidth, height: slideHeight }); 
         $(element + ' ul li').css({ width: slideWidth, height: slideHeight });
@@ -64,8 +64,8 @@ $(document).ready(function(){
         });
 	}
 	
-    var slider = new Slider('#slider','.prev','.next');
-    var slider2 = new Slider('#slider2','.prev2','.next2');
+    let slider = new Slider('#slider','.prev','.next');
+    let slider2 = new Slider('#slider2','.prev2','.next2');
 	
 	
 });
