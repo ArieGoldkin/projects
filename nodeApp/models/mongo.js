@@ -17,12 +17,5 @@ var userSchema = new mongoose.Schema({
 
 var User = mongoose.model("User", userSchema);
 
-// User.create({
-//     firstName: "Arie", 
-//     lastName: "goldkin",
-//     phone: "0547039199",
-//     email: "ariegoldk@gmail.com",
-//     moreInfo: "HELLO THIS IS A USER POST!"
-// });
 
 module.exports = mongoose.model('Users',userSchema);
